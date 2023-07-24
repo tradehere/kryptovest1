@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />      
+    <title>Kryptovest.com</title> 
+    <style type="text/css">
+    *{
+  Margin: 0;
+  Padding: 0;
+  Box-sizing: border-box;
+  Font-family: "Poppins", sans-serif;
+}
+Main {
+  Background:url(btc.jpg);
+}
+.container {
+  Max-width: 1300px;
+  Width: 100%;
+  Margin: 0 auto;
+}
+Header {
+  Position: fixed;
+  Top: 0;
+  Left: 0;
+  Width: 100%;
+  z-index: 1000;
+}
+.nav {
+  Display: flex;
+  Align-items: center;
+  Justify-content: space-between;
+  Padding: 0 60px;
+}
+.nav_logo {
+  Padding: 10px 0;
+}
+.menu_items {
+  Display: flex;
+  List-style: none;
+  Gap: 20px;
+}
+A {
+  Color: #fff;
+  Text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  Position: relative;
+  Min-height: 10vh;
+  Width: 100%;
+  Background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
+  Background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  Background-repeat: no-repeat;
+}
+.curveImg {
+  Position: absolute;
+  Bottom: 0;
+  Width: 100%;
+  Pointer-events: none;
+}
+.hero .row {
+  Display: flex;
+  Align-items: center;
+  Min-height: 100vh;
+  Height: 100%;
+  Width: 100%;
+  Padding: 0 60px;
+  Gap: 30px;
+  Justify-content: space-between;
+}
+.hero .row h2,
+.hero .row p {
+  Color: #fff;
+}
+.hero .row h2 {
+  Font-size: 36px;
+  Margin-bottom: 16px;
+}
+.hero .column {
+  Width: 50%;
+}
+.buttons {
+  Display: flex;
+  Margin-top: 25px;
+  Gap: 10px;
+}
+.btn1 {
+  Padding: 14px 26px;
+  Background: #fff;
+  Border-radius: 50px;
+  Border: none;
+  Cursor: pointer;
+  Transition: all 0.3s ease;
+  width:30%;
+}
+.btn:last-child {
+  Border: 2px solid #fff;
+  Background: transparent;
+  Color: #fff;
+}
+.btn:last-child:hover {
+  Background-color: #fff;
+  Color: #333;
+}
+.hero_img {
+  Width: 100%;
+  z-index: 10;
+  position: relative;
+}
+#menu_toggle {
+  Display: none;
+}
+
+/* Reponsive */
+@media (width < 860px) {
+  #menu_toggle {
+    Display: block;
+  }
+  .nav {
+    Padding: 0 20px;
+    Background-color: #fff;
+  }
+
+  .menu_items {
+    Position: fixed;
+    Top: 0;
+    Width: 260px;
+    Background-color: #fff;
+    Height: 100%;
+    Left: -100%;
+    Padding: 50px 30px 30px;
+    Flex-direction: column;
+    Transition: all 0.5s ease;
+  }
+  .showMenu .menu_items {
+    Left: 0;
+  }
+  A {
+    Color: #333;
+  }
+  #menu_toggle {
+    Width: 20px;
+    Cursor: pointer;
+  }
+  .menu_items #menu_toggle {
+    Position: absolute;
+    Top: 20px;
+    Right: 20px;
+  }
+  .hero {
+    Padding-top: 130px;
+  }
+  .hero .row {
+    Flex-direction: column;
+    Padding: 0 20px;
+    Justify-content: top;
+  }
+  .hero .row .column {
+    Width: 100%;
+  }
+}
+
+@media (width < 600px) {
+  .hero {
+    Padding-top: 80px;
+  }
+  .hero .row h2 {
+    Font-size: 26px;
+  }
+  .buttons {
+    Justify-content: center;
+  }
+  .btn {
+    Padding: 10px 16px;
+  }
+}
+   
+
+.main{
+  Width: 100%;
+  Height: 100vh;
+  Display: flex;
+  Align-items: center;
+  Justify-content: center;
+  Background-position: center;
+ background-color: #060e55;
+}
+.profile-card{
+  Display: flex;
+  Flex-direction: column;
+  Align-items: center;
+  Max-width: 400px;
+  Width: 100%;
+  Border-radius: 25px;
+  Padding: 30px;
+  Border: 1px solid #fff;
+  Box-shadow: 0 5px 20px rgba(240, 243, 243, 0.897);
+}
+.image{
+  Position: relative;
+  Height: 150px;
+  Width: 150px;
+}
+.image .profile-pic{
+  Width: 100%;
+  Height: 100%;
+  Object-fit: cover;
+  Border-radius: 50%;
+  Box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.data{
+  Display: flex;
+  Flex-direction: column;
+  Align-items: center;
+  Margin-top: 15px;
+  color: #fff;
+}
+.data h2{
+  Font-size: 33px;
+  Font-weight: 600;
+  color: #fff;
+}
+Span{
+  Font-size: 18px;
+  color: #fff;
+}
+.row{
+  Display: flex;
+  Align-items: center;
+ color: #fff;
+  Margin-top: 30px;
+}
+.row .info{
+  Text-align: center;
+  Padding: 0 20px;
+}
+.buttons{
+  Display: flex;
+  Align-items: center;
+  Margin-top: 30px;
+}
+.buttons .btn{
+  Color: #fff;
+  Text-decoration: none;
+  Margin: 0 20px;
+  Padding: 8px 25px;
+  Border-radius: 25px;
+  Font-size: 18px;
+  White-space: nowrap;
+  Background: linear-gradient(to left, #221ed8 0%, #06123a 100%);
+}
+.buttons .btn:hover{
+  Box-shadow: inset 0 5px 20px rgba(243, 245, 247, 0.897);
+}
+.hoo{
+    font-size:40%;
+    color:#fff;
+    align-items: center;
+     justify-content: center;
+     margin-left: 20%;
+
+
+}
+.hooo{
+    font-size:25px;
+
+}
+.hd{
+    font-size:40%;
+}
+
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorcrossorigin="anonymous"></script>
+
+</head>
+<body >
+    <main> 
+        <header>
+          <nav class="nav container">
+            <h2 class="nav_logo"><a href="kryptovest.html">Kryptovest</a></h2>
+  
+            <ul class="menu_items">
+              <li><a href="kryptovest.html" class="nav_link">Home</a></li>
+              <li  onclick="scroll()"><a href="" class="nav_link" >About</a></li>
+              <li><a href="plan.html" class="nav_link">Plan</a></li>
+              <li><a href="contact.html" class="nav_link">Contact</a></li>
+            </ul>
+            <img src="krypt.jpg" alt="timesicon" id="menu_toggle" />
+          </nav>
+        </header>
+        <br>
+        <br>
+        <br>
+        <section class="hero">
+            <div class="row container">
+              <div class="column">
+                <h2 class="hd">
+        Awesome packs to invest in</h2>
+        <p class="hooo">You might be wondering how we are able,
+            <br>
+            to pay you such amount of money from investing
+            <br>
+            well it's simple. 
+            <br>
+            We use the money you invested in our platform,
+            <br>
+            to trade with heavy instrumets such as,BTC/USD,ETH/USD
+             <br>
+             binaries like Volatility75,Jump index etc.
+             <br>
+             which will split the profit in twos one for the investor
+             <br>
+             and one for the traders on the platform 
+        </p>
+        </div>
+        </div>
+        </section>
+            <section class="main">
+            <br>
+        
+            <br>
+            <div class="profile-card">
+              <div class="image">
+                <img src="btc.jpg" alt="" class="profile-pic">
+              </div>
+              <div class="data">
+                <h2>Platinium Pack</h2>
+                <span>$10,000</span>
+              </div>
+              <div class="row">
+                <div class="info">
+                  <h3>Daily Return</h3>
+                  <span>$5,000</span>
+                </div>
+                <div class="info">
+                </div>
+                <div class="info">
+                  <h3>Total Return</h3>
+                  <span>$150,000</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="payment.html" class="btn">invest</a>
+              </div>
+            </div>
+            </section>
+            
+            <section class="main">
+            <div class="profile-card">
+              <div class="image">
+                <img src="btc.jpg" alt="" class="profile-pic">
+              </div>
+              <div class="data">
+                <h2>Daimond Pack</h2>
+                <span>$5,000</span>
+              </div>
+              <div class="row">
+                <div class="info">
+                  <h3>Daily Return</h3>
+                  <span>$1,500</span>
+                </div>
+                <div class="info">
+                </div>
+                <div class="info">
+                  <h3>Total Return</h3>
+                  <span>$60,000</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="payment.html" class="btn">invest</a>
+              </div>
+            </div>
+            </section>
+  
+            <section class="main">
+            <div class="profile-card">
+              <div class="image">
+                <img src="btc.jpg" alt="" class="profile-pic">
+              </div>
+              <div class="data">
+                <h2>Gold Pack</h2>
+                <span>$2,500</span>
+              </div>
+              <div class="row">
+                <div class="info">
+                  <h3>Daily Return</h3>
+                  <span>$1,500</span>
+                </div>
+                <div class="info">
+                </div>
+                <div class="info">
+                  <h3>Total Return</h3>
+                  <span>$45,000</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="payment.html" class="btn">invest</a>
+              </div>
+            </div>    
+          </section>
+          
+          <section class="main">
+            <div class="profile-card">
+              <div class="image">
+                <img src="btc.jpg" alt="" class="profile-pic">
+              </div>
+              <div class="data">
+                <h2>Bronze Pack</h2>
+                <span>$1,240</span>
+              </div>
+              <div class="row">
+                <div class="info">
+                  <h3>Daily Return</h3>
+                  <span>$530</span>
+                </div>
+                <div class="info">
+                </div>
+                <div class="info">
+                  <h3>Total Return</h3>
+                  <span>$15,900</span>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="payment.html" class="btn">invest</a>
+              </div>
+            </div>    
+          </section>
+  
+          <br>
+          <br>  
+        </main>
+        </body>
+    </html>
